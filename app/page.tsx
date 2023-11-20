@@ -1,6 +1,6 @@
 export default function Home() {
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-between p-24">
+		<main className="p-8">
 			<h2 className="font-weight: 700">What's your name?</h2>
 			<p className="font-mono">I'm called Nellie.</p>
 			<h2>How old are you?</h2>
