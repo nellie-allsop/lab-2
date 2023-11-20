@@ -1,3 +1,3 @@
 export default function FavouriteRoute() {
-	return <p>some favourites</p>;
+	return <p className="p-8">I love chocolate covered pretzels.</p>;
 }
