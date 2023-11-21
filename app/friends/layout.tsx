@@ -1,10 +1,3 @@
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-	title: "A cute website",
-	description: "made during a next.js course",
-};
-
 export default function friendsLayout({
 	children,
 }: {

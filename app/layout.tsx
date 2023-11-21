@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 const space = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "about Nellie",
+	title: "🌺Nellie🌺",
 	description:
 		"Come on a magical, mystical journey into the world of Miss Allsop.",
 };

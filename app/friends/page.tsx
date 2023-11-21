@@ -94,7 +94,7 @@ export default function Page({
 					return (
 						<div className="font-mono" key={guineas.id}>
 							<Link href={`/friends/${guineas.name.toLowerCase()}`}>
-								<div className="bg-green-200">{guineas.name}</div>
+								<div className="bg-green-200 font-bold underline">{guineas.name}</div>
 							</Link>
 							<p>Coat colour: {guineas.colour}</p>
 							<p>Squish factor: {guineas.squishFactor}</p>
