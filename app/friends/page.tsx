@@ -1,4 +1,10 @@
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Friends",
+	description: "A page all about some of my furry friends",
+};
 
 type guineasSearchQuery = {
 	sortBy: string;
@@ -7,6 +13,7 @@ type guineasSearchQuery = {
 type guineasType = {
 	name: string;
 	squishFactor: number;
+	colour: string;
 	id: number;
 };
 
@@ -14,17 +21,20 @@ let guineas: guineasType[] = [
 	{
 		name: "Derek",
 		squishFactor: 10,
+		colour: "orange",
 		id: 0,
 	},
 	{
 		name: "Butternut",
 		squishFactor: 5,
-		id: 2,
+		colour: "squashy hue",
+		id: 1,
 	},
 	{
 		name: "Bernard",
 		squishFactor: 8,
-		id: 1,
+		colour: "brown",
+		id: 2,
 	},
 ];
 
@@ -51,23 +61,47 @@ export default function Page({
 		sortedGuineas.sort(compareGuineas).reverse();
 	}
 	return (
-		<div>
-			<h1>Furry amigos</h1>
-			<Link href="/friends">Reset the page</Link>
-			<Link href="/friends?sortBy=asc">Sort low-high</Link>
-			<Link href="/friends?sortBy=desc">Sort high-low</Link>
-
-			{sortedGuineas.map((guineas) => {
-				return (
-					<div key={guineas.id}>
-						<Link href={`/friends${guineas.name.toLowerCase()}`}>
-							{guineas.name}
-							<br />
-							{guineas.squishFactor}
-						</Link>
-					</div>
-				);
-			})}
+		<div className="text-2xl">
+			<div className="flex flex-col items-center">
+				<h1 className="font-bold text-4xl m-2">Furry amigos</h1>
+				<p className="m-2">Click on each name to find out more about each friend!</p>
+				<h2 className="m-2">Sort by squish factor</h2>
+			</div>
+			<div className="flex flex-row justify-around m-8">
+				<Link
+					className="bg-green-500 hover:bg-green-300 font-bold rounded py-3 px-3"
+					href="/friends"
+				>
+					Reset the page
+				</Link>
+				<br />
+				<Link
+					className="bg-green-500 hover:bg-green-300 font-bold rounded py-3 px-3"
+					href="/friends?sortBy=asc"
+				>
+					Sort low-high
+				</Link>
+				<br />
+				<Link
+					className="bg-green-500 hover:bg-green-300 font-bold rounded py-3 px-3"
+					href="/friends?sortBy=desc"
+				>
+					Sort high-low
+				</Link>
+			</div>
+			<div className="bg-green-500 flex flex-col">
+				{sortedGuineas.map((guineas) => {
+					return (
+						<div className="font-mono" key={guineas.id}>
+							<Link href={`/friends/${guineas.name.toLowerCase()}`}>
+								<div className="bg-green-200">{guineas.name}</div>
+							</Link>
+							<p>Coat colour: {guineas.colour}</p>
+							<p>Squish factor: {guineas.squishFactor}</p>
+						</div>
+					);
+				})}
+			</div>
 		</div>
 	);
 }

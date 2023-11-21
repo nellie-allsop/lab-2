@@ -1,11 +1,21 @@
-type guineaParam = { params: { pets: string } };
+import Link from "next/link";
 
-export default function GPRoute({ params }: guineaParam) {
+type guineaParam = { params: { guineapigs: string } };
+
+export function generateMetadata({ params }: guineaParam) {
+	const modTitle =
+		params.guineapigs[0].toUpperCase() + params.guineapigs.slice(1);
+	return {
+		title: `My friends | ${modTitle}`,
+		description: `A few facts about ${params.guineapigs}`,
+	};
+}
+
+export default function Page({ params }: guineaParam) {
 	return (
 		<div>
-			<p className="p-40 flex justify-around">
-				This page is spooookily different to the others
-			</p>
+			<h2>A dynamic route parameter: {params.guineapigs}</h2>
+			<Link href="/friends">back button</Link>
 		</div>
 	);
 }
