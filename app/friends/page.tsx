@@ -65,15 +65,15 @@ export default function Page({
 		<div className="text-2xl">
 			<div className="flex flex-col items-center">
 				<h1 className="font-bold text-4xl m-2">Furry amigos</h1>
-				<section>
+				<section className="flex">
 				<Image src="/Derek.jpg" width={343.5} height={405} alt="Derek Allsop" />
-				<Image src="/Bernard.jpg" width={710} height={838} alt="Bernard Allsop" />
-				<Image src="/Butternut.jpg" width={2448} height={3264} alt="Butternut Allsop" />
+				<Image src="/Bernard.jpg" width={355} height={419} alt="Bernard Allsop" />
+				<Image src="/Butternut.jpg" width={306} height={408} alt="Butternut Allsop" />
 				</section>
 				<p className="m-2">
 					Click on each name to find out more about each friend!
 				</p>
-				<h2 className="m-2">Sort by squish factor</h2>
+				<h2 className="m-2">You can also sort them by squish factor (for fun only though, I love them all equally❤️)</h2>
 			</div>
 			<div className="flex flex-row justify-around m-8">
 				<Link
