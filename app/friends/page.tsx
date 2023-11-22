@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
 	title: "Friends",
@@ -64,7 +65,14 @@ export default function Page({
 		<div className="text-2xl">
 			<div className="flex flex-col items-center">
 				<h1 className="font-bold text-4xl m-2">Furry amigos</h1>
-				<p className="m-2">Click on each name to find out more about each friend!</p>
+				<section>
+				<Image src="/Derek.jpg" width={343.5} height={405} alt="Derek Allsop" />
+				<Image src="/Bernard.jpg" width={710} height={838} alt="Bernard Allsop" />
+				<Image src="/Butternut.jpg" width={2448} height={3264} alt="Butternut Allsop" />
+				</section>
+				<p className="m-2">
+					Click on each name to find out more about each friend!
+				</p>
 				<h2 className="m-2">Sort by squish factor</h2>
 			</div>
 			<div className="flex flex-row justify-around m-8">
@@ -94,7 +102,9 @@ export default function Page({
 					return (
 						<div className="font-mono" key={guineas.id}>
 							<Link href={`/friends/${guineas.name.toLowerCase()}`}>
-								<div className="bg-green-200 font-bold underline">{guineas.name}</div>
+								<div className="bg-green-200 font-bold underline">
+									{guineas.name}
+								</div>
 							</Link>
 							<p>Coat colour: {guineas.colour}</p>
 							<p>Squish factor: {guineas.squishFactor}</p>
