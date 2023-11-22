@@ -11,7 +11,7 @@ export default function Header() {
 					>
 						Home{" "}
 					</Link>
-					<Link 						className="bg-green-500 hover:bg-green-300 font-bold rounded py-3 px-3" href="./about">About me</Link>
+					<Link 						className="bg-green-500 hover:bg-green-300 font-bold rounded py-3 px-3" href="./about">About</Link>
 					<Link 						className="bg-green-500 hover:bg-green-300 font-bold rounded py-3 px-3" href="./favourites">My favourites</Link>
 					<Link 						className="bg-green-500 hover:bg-green-300 font-bold rounded py-3 px-3" href="./friends">Some friends...</Link>
 				</nav>
