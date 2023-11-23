@@ -7,13 +7,34 @@ export default function Header() {
 				<nav className="flex justify-around m-8 text-2xl">
 					<Link
 						className="bg-green-500 hover:bg-green-300 font-bold rounded py-3 px-3"
-						href="./"
+						href="/"
 					>
 						Home{" "}
 					</Link>
-					<Link 						className="bg-green-500 hover:bg-green-300 font-bold rounded py-3 px-3" href="./about">About</Link>
-					<Link 						className="bg-green-500 hover:bg-green-300 font-bold rounded py-3 px-3" href="./favourites">My favourites</Link>
-					<Link 						className="bg-green-500 hover:bg-green-300 font-bold rounded py-3 px-3" href="./friends">Some friends...</Link>
+					<Link
+						className="bg-green-500 hover:bg-green-300 font-bold rounded py-3 px-3"
+						href="/about"
+					>
+						About
+					</Link>
+					<Link
+						className="bg-green-500 hover:bg-green-300 font-bold rounded py-3 px-3"
+						href="/favourites"
+					>
+						My favourites
+					</Link>
+					<Link
+						className="bg-green-500 hover:bg-green-300 font-bold rounded py-3 px-3"
+						href="/blog"
+					>
+						Blog
+					</Link>
+					<Link
+						className="bg-green-500 hover:bg-green-300 font-bold rounded py-3 px-3"
+						href="/friends"
+					>
+						Some friends...
+					</Link>
 				</nav>
 				<div>
 					<br />
