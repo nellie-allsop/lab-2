@@ -11,7 +11,7 @@ export default function Page(){
       <ul>
         {categories.map(category => {
           return (
-            <li key={category.catslug}>
+            <li key={category.name}>
               <Link href={`/blog/categories/${category.catslug}`}>{category.name}
               </Link>
             </li>
