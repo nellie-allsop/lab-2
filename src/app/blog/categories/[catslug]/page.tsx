@@ -25,7 +25,7 @@ export default function Page({ params }: blogParams) {
 		<>
 			{posts.map((post) => {
 				return (
-					<div>
+					<div key={post.slug}>
 						<h1>{post.title}</h1>
 						<p>{post.content}</p>
 					</div>
